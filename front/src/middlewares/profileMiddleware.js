@@ -8,7 +8,7 @@ const profileMiddleware = (store) => (next) => (action) => {
 
   switch (action.type) {
     case FETCH_USER:
-      axios.get(`http://100.25.159.39/api/users/${id}`)
+      axios.get(`http://localhost:8000/api/users/${id}`)
         .then((response) => {
           // console.log(response);
           store.dispatch(saveUser(response.data));

@@ -11,7 +11,7 @@ const authMiddleware = (store) => (next) => (action) => {
       // console.log(auth.password);
       axios.post(
         // url
-        'http://100.25.159.39/api/login_check',
+        'http://localhost:8000/api/login_check',
         {
           email: auth.email,
           password: auth.password,

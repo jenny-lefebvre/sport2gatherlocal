@@ -7,7 +7,7 @@ const registMiddleware = (store) => (next) => (action) => {
     case SUBMIT_REGISTER: {
       const { regist } = store.getState();
       axios.post(
-        'http://100.25.159.39/api/users',
+        'http://localhost:8000/api/users',
         {
           email: regist.email,
           username: regist.username,

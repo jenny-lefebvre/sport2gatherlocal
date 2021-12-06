@@ -15,7 +15,7 @@ const SportsMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_SPORTS:
       // console.log('on va envoyer une requête pour récupérer les sports');
-      axios.get('http://100.25.159.39/api/sports')
+      axios.get('http://localhost:8000/api/sports')
         .then((response) => {
           // console.log(response);
           // aller placer response.data dans le state
@@ -29,7 +29,7 @@ const SportsMiddleware = (store) => (next) => (action) => {
       break;
     case FETCH_CATEGORIES:
       // console.log('on va envoyer une requête pour récupérer les catégories');
-      axios.get('http://100.25.159.39/api/categories')
+      axios.get('http://localhost:8000/api/categories')
         .then((response) => {
           // console.log(response);
           // aller placer response.data dans le state
@@ -42,7 +42,7 @@ const SportsMiddleware = (store) => (next) => (action) => {
         });
       break;
     case FETCH_RANDOM_SPORTS:
-      axios.get(('http://100.25.159.39/api/random/sports'))
+      axios.get(('http://localhost:8000/api/random/sports'))
         .then((response) => {
           const randomSportsData = response.data;
           const randomSportsLimited = randomSportsData.slice(0, 3);

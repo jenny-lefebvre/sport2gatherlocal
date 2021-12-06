@@ -20,7 +20,7 @@ const postMiddleware = (store) => (next) => (action) => {
       const userId = auth.id;
 
       axios.post(
-        `http://100.25.159.39/api/posts/${postId}/add/${userId}`,
+        `http://localhost:8000/api/posts/${postId}/add/${userId}`,
         // datas
         {},
         // options : headers
@@ -44,7 +44,7 @@ const postMiddleware = (store) => (next) => (action) => {
       const userId = auth.id;
 
       axios.delete(
-        `http://100.25.159.39/api/posts/${postId}/delete/${userId}`,
+        `http://localhost:8000/api/posts/${postId}/delete/${userId}`,
         // options : headers
         {
           headers: {
@@ -65,7 +65,7 @@ const postMiddleware = (store) => (next) => (action) => {
       const postId = post.id;
 
       axios.delete(
-        `http://100.25.159.39/api/posts/${postId}`,
+        `http://localhost:8000/api/posts/${postId}`,
         // options : headers
         {
           headers: {
@@ -84,7 +84,7 @@ const postMiddleware = (store) => (next) => (action) => {
       const { post } = store.getState();
       const { auth } = store.getState();
       axios.post(
-        'http://100.25.159.39/api/comments',
+        'http://localhost:8000/api/comments',
         // datas
         {
           content: post.newComment,

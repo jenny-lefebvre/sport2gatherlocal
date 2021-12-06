@@ -9,7 +9,7 @@ import {
 const postsMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_POSTS: {
-      axios.get('http://100.25.159.39/api/posts')
+      axios.get('http://localhost:8000/api/posts')
         .then((response) => {
           // console.log(response);
           store.dispatch(savePosts(response.data));
@@ -19,7 +19,7 @@ const postsMiddleware = (store) => (next) => (action) => {
       break;
     }
     case FETCH_RANDOM_POSTS: {
-      axios.get(('http://100.25.159.39/api/random/posts'))
+      axios.get(('http://localhost:8000/api/random/posts'))
         .then((response) => {
           const randomPostsData = response.data;
           const randomPostsLimited = randomPostsData.slice(0, 3);

@@ -36,7 +36,7 @@ const searchbarMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_SPORTS:
       // console.log('on va envoyer une requête pour récupérer les sports');
-      axios.get('http://100.25.159.39/api/sports')
+      axios.get('http://localhost:8000/api/sports')
         .then((response) => {
           // console.log(response);
           // aller placer response.data dans le state
@@ -52,7 +52,7 @@ const searchbarMiddleware = (store) => (next) => (action) => {
     case SUBMIT_SEARCHBAR:
       // console.log(store.getState());
 
-      axios.get(`http://100.25.159.39/api/posts/${sportUrl}/${placeUrl}/${dateUrl}`)
+      axios.get(`http://localhost:8000/api/posts/${sportUrl}/${placeUrl}/${dateUrl}`)
         .then((response) => {
           // console.log(response);
           // aller placer response.data dans le state

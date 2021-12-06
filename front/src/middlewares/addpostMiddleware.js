@@ -11,7 +11,7 @@ const addpostMiddleware = (store) => (next) => (action) => {
       // console.log(auth.id);
       // console.log(store.getState().auth.token);
       axios.post(
-        'http://100.25.159.39/api/posts',
+        'http://localhost:8000/api/posts',
         {
           title: addpost.title,
           description: addpost.description,
