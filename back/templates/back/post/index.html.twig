@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post index{% endblock %}
+
+{% block body %}
+ 
+
+        <a href="{{ path('back_post_new') }}" class="btn btn-outline-info">Créer une nouvelle annonce</a>
+    <table class="table table-hover">
+    
+        <thead>
+            <tr class="table-info">
+            
+                <th>Id</th>
+                <th>Title</th>
+                <th>Slug</th>
+                <th>Active</th>
+                <th>Description</th>
+                <th>Level</th>
+                <th>Location</th>
+                <th>MinParticipants</th>
+                <th>MaxParticipants</th>
+                <th>EventDate</th>
+                <th>CreatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.slug}}</td>
+                <td>{{ post.active ? 'Yes' : 'No' }}</td>
+                <td>{{ post.description }}</td>
+                <td>{{ post.level }}</td>
+                <td>{{ post.location }}</td>
+                <td>{{ post.minParticipants }}</td>
+                <td>{{ post.maxParticipants }}</td>
+                <td>{{ post.eventDate ? post.eventDate|date('Y-m-d H:i') : '' }}</td>
+                <td>{{ post.createdAt ? post.createdAt|date('Y-m-d H:i') : '' }}</td>
+                <td>
+                    <a href="{{ path('back_post_show', {'id': post.id}) }}" class="btn btn-outline-info">show</a>
+                    <a href="{{ path('back_post_edit', {'id': post.id}) }}" class="btn btn-outline-primary">edit</a>
+                    {{ include('back/post/_delete_form.html.twig') }}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="13">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}

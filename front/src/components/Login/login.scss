@@ -1,0 +1,45 @@
+@use 'src/styles/vars';
+
+.login-button {
+  border: none;
+  padding: 0.5rem;
+  background-color: vars.$buttonColor;
+  color: vars.$lightColor;
+  border-radius: 20px;
+
+  &.login-button--open {}
+}
+
+.login-form {
+  position: absolute;
+  right: 15px;
+
+  @media (max-width: 460px) {
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px;
+    padding: 0.5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 8.3rem;
+    font-size: 1rem;
+    color: gray;
+    width: 18.5rem;
+  }
+
+}
+
+.login-submit {
+  margin-bottom: 1rem;
+  position: absolute;
+  left: 1rem;
+
+  @media (max-width: 460px) {
+    position: absolute;
+    left: 7.5rem;
+    bottom: -4rem;
+  }
+}
+
+.login-field-bottom {
+  margin: 0.8rem 0;
+}

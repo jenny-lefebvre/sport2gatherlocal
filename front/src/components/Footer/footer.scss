@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+
+footer {
+  background-color: vars.$lightFooterColor;
+  padding: 1.5rem;
+  color: vars.$lightColor;
+  height: vars.$footerHeight;
+  text-align: center;
+
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+    margin: auto;
+    padding-bottom: 1rem;
+    @media (max-width: 480px) {
+      width: 12rem;
+     }
+  }
+
+  .footer-title {
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .copyright {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-nav {
+    padding: 0.5rem;
+  }
+}

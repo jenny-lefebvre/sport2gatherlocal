@@ -1,0 +1,245 @@
+@use 'src/styles/vars';
+
+.header {
+  background: linear-gradient(90deg, vars.$gradientLightLeft, vars.$gradientLightRight);
+  padding: 2rem;
+  height: vars.$headerHeight;
+  text-align: center;
+  color: vars.$lightColor;
+
+  @media (max-width: 480px) {
+    height: 24rem;
+    padding: 1rem;
+  }
+
+  .burger-nav {
+    display: none;
+
+    @media (max-width: 480px) {
+      display: unset;
+      position: absolute;
+      top: 0.5rem;
+      right: -0.5rem;
+    }
+  }
+
+  .switch-container {
+    position: absolute;
+    left:25rem;
+    @media (max-width: 480px) {
+      // position: absolute;
+      // left: 14rem;
+      // top:0.2rem;
+      display: none;
+    }
+  }
+
+  .theme-switch {
+    margin-right: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    .theme-icon {
+      position: absolute;
+      right: 4.5rem;
+    }
+
+    .theme-icon-dark {
+      position: absolute;
+      right: -0.5rem;
+    }
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 480px) {
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      width: calc(100%/3);
+      font-size: 1.2rem;
+      justify-content: center;
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+
+      .nav-item {
+        padding: 1rem;
+
+        @media (max-width: 480px) {
+          padding: 0.5rem;
+        }
+      }
+
+      .nav-item--active {
+        color: rgb(7, 40, 102)
+      }
+    }
+
+    .header-top-left {
+      width: calc(100%/3);
+      display: flex;
+      align-items: center;
+
+      .main-title {
+        font-size: 2rem;
+        font-weight: bold;
+
+        @media (max-width: 460px) {
+          font-size: 1.3rem;
+        }
+      }
+
+      .main-logo {
+        width: 90px;
+
+        @media (max-width: 460px) {
+          width: 65px;
+        }
+      }
+    }
+
+    .header-top-right {
+      width: calc(100%/3);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .avatar-username {
+        @media (max-width: 460px) {
+          display: none;
+        }
+      }
+
+      .avatar-logo {
+        @media (max-width: 460px) {
+          position: absolute;
+          top:0.5rem;
+          right: 2.8rem;
+        }
+      }
+
+      .switch {
+        padding: 1rem;
+
+        @media (max-width: 460px) {
+          position: absolute;
+          top: 0rem;
+          left: 12rem;
+        }
+      }
+
+      .login-button {
+        margin-left: 1rem;
+        @media (max-width: 460px) {
+          position: absolute;
+          top:4.8rem;
+          right:3.2rem;
+          margin-right: 1rem;
+        }
+      }
+
+      .register-button {
+        @media (max-width: 460px) {
+          position: absolute;
+          top:4.8rem;
+          left:3.5rem;
+          margin-right: 1rem;
+          padding-left: 1.1rem;
+          padding-right: 1.1rem;
+      }
+    }
+
+      .logout {
+        @media (max-width: 460px) {
+          display: none;
+        }
+      }
+
+      .account {
+        @media (max-width: 460px) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .searchBar {
+    background: white;
+    width: 42rem;
+    // min-width: 670px;
+    height: 70px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    align-items: center;
+
+    @media (max-width: 480px) {
+      width: 83%;
+      height: 150px;
+      margin-top: 6rem;
+    }
+
+    form {
+      margin: 0;
+      @media (max-width: 460px) {
+        padding: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      input,
+      label {
+        display: block;
+        margin: 0 10px;
+        text-align: left;
+        background-color: white;
+      }
+
+      input {
+        border: 0;
+        outline: 0;
+        margin: 5px 0 0 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(126, 126, 126);
+      }
+
+      input:focus {
+        outline: none !important;
+      }
+
+      .form-input {
+        float: left;
+      }
+
+      .border {
+        border-right-style: solid;
+        border-left-style: solid;
+        border-color: grey;
+      }
+
+      .searchBar-label {
+        color: rgb(58, 58, 58);
+      }
+
+      .search-button {
+        border-radius: 100%;
+        background: #8c52ff;
+        height: 40px;
+        width: 40px;
+        border: none;
+        margin-left: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+input{
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 200px;
+}
+
+textarea{
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+label{
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 120px;
+}
+
+select{
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+a{
+    margin:0.5em;
+}
+
+.btn{
+    width:120px;
+    display: block;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+form .btn{
+    margin-left: 9px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.nav + a {
+    width: max-content;
+    font-weight: bold;
+}
+
+#image{
+    width: 300px;
+}
+
+.nav{
+    font-size: 24px;
+}
+
+h1{
+    background: linear-gradient(90deg, #34E4DA, #235DB8);
+}
+
+.active{
+    color: rgb(161, 51, 161);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    
+    
+}
+
+.btn-outline-info{
+    border-radius: 20px;
+}
+
+.login-btn{
+    width: 160px;
+}
+
+#logout-btn{
+    display: inline;
+}
+
+#logout-btn a{
+    color: rgb(161, 51, 161);
+    text-decoration: none;
+}
+
+#logout-btn a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+#login-checkbox{
+    display: inline;
+    width: 30px;
+}
+
+#login-label{
+    width: 200px;
+}
+
+#login-text{
+    margin-left: 1em;
+}
+
+.img-accueil{
+    max-height: 75%;
+    object-fit: cover;
+}
+
+#write-password{
+    width: 150px;
+}

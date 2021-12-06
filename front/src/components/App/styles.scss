@@ -1,0 +1,300 @@
+@use 'src/styles/vars';
+
+.app {
+  max-width: 100vw;
+
+  .page-loader {
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    border: none;
+    padding: 0.7rem;
+    background-color: vars.$buttonColor;
+    color: vars.$lightColor;
+    border-radius: 20px;
+  }
+}
+
+.dark {
+
+  .header {
+    background: linear-gradient(90deg, vars.$gradientDarkLeft, vars.$gradientDarkRight);
+
+    .nav-item--active {
+      color: rgb(0, 178, 233) !important;
+    }
+  }
+
+  .comment-input {
+    background-color: vars.$cardsDarkColor !important;
+    #comment-textarea{
+      background-color: vars.$darkColor;
+      color: vars.$lightColor !important;
+      border: none;
+    }
+  }
+
+  .home {
+    color: vars.$lightColor !important;
+
+    .postcard-random,
+    .sportcard-random {
+      background-color: vars.$cardsDarkColor !important;
+    }
+  }
+
+  .page {
+    background-color: vars.$darkColor;
+    color: vars.$lightColor;
+  }
+
+  .success-message {
+    color: rgb(27, 255, 148);
+    border: solid 1px rgb(0, 119, 73);
+    background-color: rgba(0, 194, 103, 0.3);
+  }
+
+  .sports {
+    color: vars.$lightColor;
+
+    .single-div-carrousel {
+      background-color: vars.$cardsDarkColor;
+    }
+  }
+
+  footer {
+    background-color: vars.$darkFooterColor;
+  }
+
+  .post-card {
+    background-color: vars.$cardsDarkColor !important;
+    border: 1px solid vars.$cardsDarkColor !important;
+  }
+
+  .filter-container {
+    background-color: vars.$cardsDarkColor !important;
+    border: 1px solid vars.$cardsDarkColor !important;
+    color: vars.$lightColor !important;
+
+
+    ::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      border: none !important;
+    }
+
+    .filter-row input,
+    select {
+      background-color: vars.$darkColor;
+      border: none;
+      color: vars.$lightColor;
+
+      &:focus {
+        outline: solid 1px rgb(29, 97, 187);
+        border: none;
+      }
+    }
+
+    .filter-city {
+      background-color: vars.$darkColor;
+
+      .MuiFormLabel-root {
+        color: vars.$lightColor !important;
+      }
+      .MuiSvgIcon-root {
+        color: vars.$lightColor;
+      }
+      .MuiInputBase-input {
+        color: vars.$lightColor;
+      }
+    }
+  }
+
+  .searchBar {
+    background-color: vars.$darkColor;
+
+    ::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      border: none !important;
+    }
+
+    .searchBar-label,
+    .input-searchbar {
+      background-color: vars.$darkColor;
+      color: vars.$lightColor !important;
+      &::placeholder {
+        color: vars.$lightColor !important;
+      }
+    }
+
+    #field-date {
+      background-color: vars.$darkColor;
+      color: vars.$lightColor !important;
+      
+    }
+  }
+
+  .post-content {
+    background-color: vars.$cardsDarkColor;
+
+    .post-title {
+      color: vars.$lightColor;
+    }
+
+    .avatar-username {
+      color: vars.$lightColor;
+    }
+  }
+
+  .comment {
+    background-color: vars.$cardsDarkColor !important;
+  }
+
+  .profile-content {
+    background-color: vars.$cardsDarkColor;
+
+    .activity-counter {
+      background-color: vars.$darkColor !important;
+      color: vars.$lightColor !important;
+    }
+
+    .profile-pseudo,
+    .profile-sports,
+    .profile-sportcard {
+      color: vars.$lightColor !important;
+    }
+  }
+
+  .postform h2 {
+    color: vars.$lightColor !important;
+
+  }
+
+  .postform-content {
+    background-color: vars.$cardsDarkColor;
+    box-shadow: none;
+    color: vars.$lightColor !important;
+
+    .select-sport-auto,
+    .filter-city {
+      background-color: vars.$darkColor;
+
+      .MuiFormLabel-root {
+        color: vars.$lightColor;
+      }
+
+      .MuiSvgIcon-root {
+        color: vars.$lightColor;
+      }
+
+      .MuiInputBase-input {
+        color: vars.$lightColor;
+      }
+    }
+
+    .postform-date input {
+      background-color: vars.$darkColor;
+      border: none;
+      color: vars.$lightColor;
+    }
+
+    ::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      border: none !important;
+    }
+
+    .postform-level select {
+      background-color: vars.$darkColor;
+      border: none;
+      color: vars.$lightColor;
+    }
+
+    .postform-label-column textarea {
+      background-color: vars.$darkColor;
+      color: vars.$lightColor;
+      border: none;
+    }
+
+    .postform-minPeople input {
+      background-color: vars.$darkColor;
+      color: vars.$lightColor;
+      border: none;
+    }
+
+    .postform-maxPeople input {
+      background-color: vars.$darkColor;
+      color: vars.$lightColor;
+      border: none;
+    }
+  }
+
+  .register-form h2 {
+    color: vars.$lightColor;
+  }
+
+  .register-form-content {
+    background-color: vars.$cardsDarkColor;
+    box-shadow: none;
+    color: vars.$lightColor;
+
+    #textarea-bio {
+      color: vars.$lightColor !important;
+    }
+
+    .field input {
+      background-color: vars.$darkColor;
+      border: 1px, solid, vars.$darkFooterColor;
+      color: vars.$lightColor;
+      border: none;
+
+      &:focus {
+        border: none;
+      }
+    }
+
+    .MuiInputBase-root {
+      background-color: vars.$darkColor;
+      color: vars.$lightColor;
+    }
+
+    .MuiSvgIcon-root {
+      color: vars.$lightColor;
+    }
+
+    .MuiFormLabel-root {
+      color: vars.$lightColor;
+    }
+
+    .MuiInputBase-input {
+      color: vars.$lightColor;
+    }
+
+    //   .field fieldset {
+    //   background-color: vars.$darkColor;
+    //   border: 1px, solid, vars.$darkFooterColor;
+    //   color: vars.$lightColor;
+    //   border: none;
+
+    // }
+
+  }
+
+  .register-bio textarea {
+    background-color: vars.$darkColor;
+    color: vars.$lightColor;
+    border: none !important;
+  }
+
+  .sport-details select {
+    background-color: vars.$darkColor;
+    border: 1px, solid, vars.$darkFooterColor;
+    color: vars.$lightColor;
+    border: none;
+  }
+
+
+
+}

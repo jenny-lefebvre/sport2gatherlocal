@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block body %}
+ 
+    <table class="table table-hover">
+        <tbody>
+            <tr class="table-info">
+                <th>Id</th>
+                <td>{{ post.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ post.title }}</td>
+            </tr>
+            <tr>
+                <th>Active</th>
+                <td>{{ post.active ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ post.description }}</td>
+            </tr>
+            <tr>
+                <th>Level</th>
+                <td>{{ post.level }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ post.location }}</td>
+            </tr>
+            <tr>
+                <th>MinParticipants</th>
+                <td>{{ post.minParticipants }}</td>
+            </tr>
+            <tr>
+                <th>MaxParticipants</th>
+                <td>{{ post.maxParticipants }}</td>
+            </tr>
+            <tr>
+                <th>EventDate</th>
+                <td>{{ post.eventDate ? post.eventDate|date('Y-m-d H:i') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('back_post_index') }}" class="btn btn-outline-info">back to list</a>
+
+    <a href="{{ path('back_post_edit', {'id': post.id}) }}" class="btn btn-outline-primary">edit</a>
+
+     {{ include('back/post/_delete_form.html.twig') }}  
+{% endblock %}

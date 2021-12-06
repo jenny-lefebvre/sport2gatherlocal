@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Sport{% endblock %}
+
+{% block body %}
+  
+
+
+    {{ include('back/sport/_form.html.twig', {'button_label': 'Update'}) }}
+   
+
+    <a href="{{ path('back_sport_index') }}" class="btn btn-outline-info">back to list</a>
+    
+ {{ include('back/sport/_delete_form.html.twig') }} 
+{% endblock %}

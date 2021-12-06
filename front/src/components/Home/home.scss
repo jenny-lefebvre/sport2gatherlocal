@@ -1,0 +1,287 @@
+@use 'src/styles/vars';
+
+.home {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  max-width: 125rem;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  color: rgb(70, 70, 70);
+
+  @media (max-width: 460px) {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 750px) and (max-width: 1023px) {
+    display: block;
+  }
+
+  .home-presentation {
+    width: 50%;
+    padding: 3rem;
+    padding-left: 10rem;
+
+    @media (max-width: 460px) {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    @media (min-width: 750px) and (max-width: 1023px) {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .button-register {
+      padding: 0.8rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      font-size: 1.2rem;
+      border-radius: 40px;
+      color: white;
+      font-weight: bold;
+
+      @media (max-width: 460px) {
+        // If you delete text-align center from home-presentation, then put a margin-left: 9rem to center the button;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .button-create {
+      padding: 0.8rem;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+      font-size: 1rem;
+      border-radius: 40px;
+      color: white;
+      font-weight: bold;
+
+      @media (max-width: 460px) {
+        // If you delete text-align center from home-presentation, then put a margin-left: 9rem to center the button;
+        font-size: 1rem;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .presentation-slogan {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      width: 60%;
+      line-height: 4.5rem;
+      @media (max-width: 460px) {
+        font-size: 1.7rem;
+        width: 100%;
+        line-height: 2rem;
+        text-align: center;
+      }
+    }
+
+    .presentation-details {
+      margin-bottom: 2rem;
+      width: 90%;
+      text-align: justify;
+      font-size: 1.5rem;
+      line-height: 2.8rem;
+      @media (max-width: 460px) {
+        font-size: 1rem;
+        margin: auto;
+        line-height: 1.6rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .home-suggestions {
+    width: 50%;
+    padding: 3rem;
+    padding-left: 5rem;
+
+    @media (max-width: 460px) {
+      width: 100%;
+      padding: 2rem;
+    }
+
+    @media (min-width: 750px) and (max-width: 1023px) {
+      width: 100%;
+      padding: 2rem 3rem 2rem 3rem;
+    }
+
+    .suggestion-title {
+      font-size: 1.8rem;
+      padding-bottom: 2rem;
+      font-weight: bold;
+      @media (max-width: 460px) {
+        font-size: 1.3rem;
+        text-align: center;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .posts-suggestions {
+      display: flex;
+      flex-direction: row;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+
+      @media (max-width: 460px) {
+        display: block;
+        margin-bottom: 4rem;
+      }
+
+      .postcard-random {
+        width: 15rem;
+        min-width: 10rem;
+        background-color: white;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        padding: 1.5rem;
+        border-radius: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        @media (max-width: 460px) {
+          width: 17rem;
+          height: 15rem;
+          margin: 1rem auto;
+          &:last-child {
+            margin:1rem auto;
+          }
+
+          &:first-child {
+            margin:1rem auto;
+          }
+        }
+
+        .author {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 2rem;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          margin-right: 1rem;
+        }
+
+        .postcard-detail {
+          margin-top: 1rem;
+          font-weight: bold;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .post-icons {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .sports-suggestions {
+      display: flex;
+      flex-direction: row;
+
+      @media (max-width: 460px) {
+        display: block;
+      }
+
+      .sportcard-random {
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: white;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        @media (max-width: 460px) {
+          width: 16.5rem;
+          margin: 1rem auto;
+          &:last-child {
+            margin:1rem auto;
+          }
+
+          &:first-child {
+            margin:1rem auto;
+          }
+        }
+
+        img {
+          width: 15rem;
+          height: 11rem;
+          @media (max-width: 460px) {
+            width: 16.5rem;
+            height: 12rem;
+          }
+        }
+
+        .sport-name {
+          padding: 1rem;
+          text-align: center;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+    }
+    
+
+    .home-carrousels {
+
+      @media (max-width: 460px) {
+        width: 100%;
+      }
+
+      .home-carrousel {
+
+        .home-carrousel-title {
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+          margin-top: 0.5rem;
+        }
+
+        .home-single-div-carrousel {
+
+          text-align: center;
+
+          .home-single-picture {
+            height: 150px;
+
+            @media (max-width: 460px) {
+              height: 100px;
+            }
+
+            @media (min-width: 750px) and (max-width: 1023px) {
+              height: 125px;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}

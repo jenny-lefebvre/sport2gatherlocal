@@ -1,0 +1,44 @@
+@use 'src/styles/vars';
+
+.sports {
+  padding: 1rem;
+  width: 95%;
+  margin: auto;
+  margin-top: 1.5rem;
+  color: rgb(59, 59, 59);
+
+  .sports-title {
+    margin-bottom: 1.5em;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 3.3rem;
+    @media (max-width: 460px) { 
+      padding-left: 0;
+      font-size: 1.4rem; 
+    }
+  }
+
+  .sports-categories {
+
+    .sports-category {
+      margin: 1rem 0;
+      margin-top: 2rem;
+      @media (max-width: 460px) { 
+        margin-top: 0.5rem;
+      } 
+
+      .sports-category-name {
+        font-size: 1.5rem;
+        padding-left: 3.5rem;
+        padding-bottom: 1rem;
+        font-weight: bold;
+        @media (max-width: 460px) { 
+          padding-left: 0;
+          font-size: 1.2rem;
+        }
+      }
+
+      
+    }
+  }
+}

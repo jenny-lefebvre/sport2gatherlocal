@@ -1,0 +1,213 @@
+@use 'src/styles/vars';
+
+.posts {
+  padding: 1rem;
+  padding-right: 0;
+  display: flex;
+
+  @media (max-width: 460px) { 
+    display: block;
+  }
+
+  .posts-filters {
+    margin-bottom: 1.5rem;
+  }
+
+  .button-create-post {
+    font-size: 1rem;
+    font-weight: bold;
+    @media (max-width: 460px) { 
+      width: 18rem;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .post-icons {
+    margin-right: 0.5rem;
+  }
+
+  .filter-container {
+    background-color: white;
+    min-width: 18rem;
+    max-width: 18rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: vars.$fontColorDark;
+    .button-container {
+      display: flex;
+      padding: 1rem;
+
+      padding-bottom: 1rem;
+      
+      @media (max-width: 460px) { 
+        padding: 1rem 6rem 1rem;
+      }
+    }
+
+    .title-post {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 1rem;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-weight: bold;
+      line-height: 1.8rem;
+    }
+
+    @media (max-width: 460px) { 
+      max-width: 21rem;
+      text-align: center;
+    }
+  }
+
+  .combobox-row {
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+
+    .filter-city {
+      max-width: 10rem;
+      outline: none;
+      margin: 1rem;
+      @media (max-width: 460px) { 
+        margin: 1rem 2.2rem;
+      }
+    }
+  }
+
+  .filter-row {
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+
+    select, input {
+      border: solid 1px rgb(200, 200, 200);
+      border-radius: 5px;
+      background-color: white;
+      padding: 1.2rem;
+      width: 10rem;
+      color: rgb(97, 97, 97);
+      margin: 1rem;
+      outline: none;
+      font-family: Arial, Helvetica, sans-serif;
+
+      @media (max-width: 460px) { 
+        margin: 1rem 2.2rem;
+      }
+
+
+      &:focus {
+        box-shadow: 0 0 8px 2px rgba(170, 170, 170, 0.1) inset;
+        border: solid 1px rgb(218, 218, 218);
+      }
+    }
+
+
+  }
+
+  .posts-cards-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 2rem;
+
+    @media (max-width: 460px) { 
+      padding-left: 0rem;
+    }
+
+
+    .post-card {
+      background-color: white;
+      border-radius: 10px;
+      border: whitesmoke solid 1px;
+      width: 20rem;
+      min-height: 35rem;
+      margin: 1rem;
+      overflow: hidden;
+      padding-bottom: 1rem;
+      position: relative;
+
+      .post-sport-picture {
+        width: 100%;
+        height: 15rem;
+      }
+
+      .post-card-content {
+        padding: 1rem;
+        .post-title {
+          font-size: 1.3rem;
+          font-weight: bold;
+          padding: 1rem;
+        }
+
+        .post-detail {
+          padding-left: 1rem;
+          padding-bottom: 0.5rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-weight: bold;
+        }
+
+        .level-container {
+          padding: 1rem;
+          padding-left: 1.3rem;
+          margin-bottom: 2rem;     
+          .level-tag {
+            border-radius: 5px;
+            max-width: 5rem;
+            text-align: center;
+            padding: 0.5rem;
+            color: white;
+            font-size: 0.8rem;
+            margin-top: 1.1rem;
+            font-weight: bold;
+
+            &.Expert {
+                background-color: rgb(182, 29, 253);
+            }
+
+            &.Confirmé {
+              background-color: rgb(29, 152, 253);
+            }
+
+            &.Débutant {
+              background-color: rgb(0, 219, 164);
+            }
+          }
+        }
+
+        .rating-box{
+          padding-left: 1.1rem;
+          margin-bottom: 0.5rem;
+          .rating-typo {
+            padding-left: 0.3rem;
+            padding-top: 0.5rem;
+          }
+        }
+
+        .post-link {
+          position: absolute;
+          bottom: 2rem;
+          left: 2.3rem;
+          color: rgb(90, 148, 241);
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+
+
+  }
+
+
+}

@@ -1,0 +1,38 @@
+<h1 class="alert alert-dismissible alert-primary">
+	<img src="{{asset ('lelogo.png') }}" width="10%" alt="logo"/>
+	Sport2Gather
+</h1>
+{% if app.request.get('_route') != 'app_login' %}
+	<ul class="nav">
+		<li class="nav-item">
+			<a class="nav-link {% if app.request.get('_route') == 'home' %}
+										    active
+										{% endif %}" aria-current="page" href="{{ path ('home') }}">Page d'accueil</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link {% if app.request.get('_route') == 'back_sport_index' %}
+										    active
+										{% endif %}" aria-current="page" href="{{ path ('back_sport_index') }}">Sports</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link {% if app.request.get('_route') == 'back_category_index' %}
+							    active
+							{% endif %}" href="{{ path ('back_category_index') }}">Catégories de sport</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link {% if app.request.get('_route') == 'back_post_index' %}
+							    active
+							{% endif %}" href="{{ path ('back_post_index') }}">Annonces</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link {% if app.request.get('_route') == 'back_comment_index' %}
+							    active
+							{% endif %}" href="{{ path ('back_comment_index') }}">Commentaires</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link {% if app.request.get('_route') == 'back_user_index' %}
+							    active
+							{% endif %}" href="{{ path ('back_user_index') }}">Utilisateurs</a>
+		</li>
+	</ul>
+{% endif %}

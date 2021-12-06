@@ -1,0 +1,33 @@
+.avatar-logo {
+  width: 40px;
+}
+
+.about-us {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  .about-us-portrait {
+    width: 50%;
+    margin: 6em auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    @media (max-width: 460px) { 
+      width: 100%;
+    }
+
+
+    img {
+      margin-bottom: 2rem;
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+    }
+    .single-portrait {
+      .single-portrait-name{
+        margin-bottom: 1em;
+        font-weight: bold;
+      }
+    }
+  }
+}

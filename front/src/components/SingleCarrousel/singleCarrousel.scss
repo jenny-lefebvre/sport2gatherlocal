@@ -1,0 +1,76 @@
+.single-carrousel {
+  margin: 1rem 3.5rem;
+
+  @media (max-width: 460px) {
+    margin: 1rem 0;
+  }
+
+  .display-inline {
+    display: inline;
+  }
+
+  .single-div-carrousel {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0.7rem;
+    background-color: white;
+    width: 24rem;
+    height: 22rem;
+    border-radius: 10px;
+    overflow: hidden;
+    @media (max-width: 460px) {
+      height: 130px;
+      width: 138px;
+    }
+    @media (min-width: 750px) and (max-width: 1100px) {
+      height: 180px;
+      width: 200px;
+    }
+    @media (min-width: 1100px) and (max-width: 1600px) {
+      height: 14rem;
+      width: 15rem;
+    }
+    @media (min-width: 1600px) and (max-width: 1900px) {
+      height: 19rem;
+        width: 20rem;
+    }
+
+    .single-picture {
+      max-width: 24rem;
+
+      @media (max-width: 460px) {
+        height: 100px;
+        width: 138px;
+      }
+
+      @media (min-width: 750px) and (max-width: 1100px) {
+        height: 140px;
+        width: 200px;
+      }
+      @media (min-width: 1100px) and (max-width: 1600px) {
+        height: 10rem;
+        width: 15rem;
+      }
+      @media (min-width: 1600px) and (max-width: 1900px) {
+        height: 15rem;
+        width: 20rem;
+      }
+    }
+
+    .single-label {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+
+      @media (max-width: 460px) {
+        font-size: 1rem;
+        margin-top: 0.3rem;
+      }
+      @media (min-width: 750px) and (max-width: 1200px) {
+        margin-top: 0.5rem;
+      }
+
+
+    }
+
+  }
+}

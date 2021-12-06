@@ -1,0 +1,26 @@
+@use 'src/styles/vars';
+
+.page {
+  padding: 2rem;
+  min-height: calc(100vh - #{vars.$headerHeight} - #{vars.$footerHeight});
+  background-color: vars.$lightColor;
+
+  @media (max-width: 460px) { 
+    padding: 0.5rem;
+  }
+
+  .legal-notices{
+    margin: 1.5rem;
+
+    .legal-notices-title{
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1rem 0 1rem 0;
+    }
+    .legal-notices-subtitle{
+      font-size: 1.2rem;
+      text-decoration: underline;
+      margin: 0.5rem 0 0.5rem 0;
+    }
+  }
+}

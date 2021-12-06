@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+
+
+       <a href="{{ path('back_user_new') }}" class="btn btn-outline-info">Créer un nouvel utilisateur</a>
+
+
+   <table class="table table-hover">
+        <thead>
+            <tr class="table-info">
+
+                <th>Picture</th>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Username</th>
+                <th>Slug</th>
+                <th>Password</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+
+                <td><img src="{{ user.picture ?? asset('defaut.jpeg') }}" width="30%"></td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.slug }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.description }}</td>
+                <td>{{ user.location }}</td>
+                <td>
+                    <a href="{{ path('back_user_show', {'id': user.id}) }}" class="btn btn-outline-info">show</a>
+                    <a href="{{ path('back_user_edit', {'id': user.id}) }}" class="btn btn-outline-primary" >edit</a>
+                    {{ include('back/user/_delete_form.html.twig') }} 
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}
